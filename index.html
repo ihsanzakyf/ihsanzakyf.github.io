@@ -6,11 +6,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="dist/output.css">
+        <link rel="stylesheet" href="dist/final.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="/dist/output.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
         <title>My Portofolio</title>
         <style>
             .truncate {
@@ -22,6 +22,28 @@
             .truncate:hover {
                 white-space: normal;
                 overflow: visible;
+            }
+
+            .tooltip {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .overflow-hidden:hover .tooltip {
+                opacity: 1;
+            }
+
+            .half-image {
+                height: 345px;
+                object-fit: cover;
             }
         </style>
     </head>
@@ -97,9 +119,9 @@
 
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2 ">
-                    <div class="relative mt-10 lg:mt-0 lg:right-0 ">
-                        <img width="300" src="dist//img/mypict.png" alt="fotoku" class="max-w-full mx-auto" />
-                        <span class="absolute -bottom-20 -z-10 left-1/2 -translate-x-1/2 ">
+                    <div class="relative mt-10 lg:mt-0 lg:right-0">
+                        <img width="320" src="dist//img/mypict.png" alt="fotoku" class="max-w-full mx-auto  " />
+                        <span class="absolute -bottom-20 -z-10 left-1/2 -translate-x-1/2">
                             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#0891B2"
                                     d="M67.4,-17.1C75.7,3.8,62.9,36.3,39.4,53.1C15.9,69.9,-18.2,71,-38.2,55.7C-58.1,40.5,-63.9,8.9,-55.2,-12.5C-46.5,-33.9,-23.2,-45.1,3.1,-46.1C29.5,-47.2,59.1,-38,67.4,-17.1Z"
@@ -121,15 +143,20 @@
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3 tracking-widest">Tentang Saya</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Jujur & Pekerja Keras</h2>
-                    <p class="font-medium text-base text-darkngora max-w-xl lg:text-lg">Saya juga memiliki sifat haus
-                        akan hal baru, seperti ilmu perusahaan yang belum pernah saya ketahui dengan adanya training /
-                        pengarahan itu hal yang sangat indah menurut saya.</p>
+                    <p class="font-medium text-base text-darkngora max-w-xl lg:text-lg">Saya adalah freshgraduate dengan
+                        program studi Manajemen Informatika yang memiliki minat
+                        dan antusiasme yang tinggi dalam bidang pengembangan perangkat lunak. Saya memiliki
+                        kemampuan dalam pemrograman dan pengembangan web menggunakan bahasa pemrograman
+                        dan framework terkini. Saya memiliki komunikasi yang baik, kemampuan kerjasama tim yang kuat,
+                        dan siap untuk berkontribusi untuk perusahaan..</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-5 lg:text-3xl lg:pt-10 ">Sosial Media</h3>
-                    <p class="font-medium text-base text-darkngora mb-6 max-w-xl lg:text-lg">Mari berkenalan, dibawah
-                        ini terdapat akun media sosial yang saya miliki, yang akan selalu bijak dalam menggunakan
-                        teknologi</p>
+                    <p class="font-medium text-base text-darkngora mb-6 max-w-xl lg:text-lg">Salam kenal, di bawah ini,
+                        saya ingin memperkenalkan sejumlah akun media sosial yang saya kelola. Saya berkomitmen untuk
+                        selalu menjalankan penggunaan teknologi dengan bijak dan bertanggung jawab. Melalui
+                        platform-platform ini, saya berharap dapat berbagi pengalaman, pengetahuan, dan inspirasi dengan
+                        komunitas online.</p>
                     <div class="flex items-center">
                         <a href="https://www.instagram.com/ihsanzakyf/" target="_blank"
                             class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-darkngora hover:border-primary hover:bg-primary hover:text-white">
@@ -204,78 +231,202 @@
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/6.png" width="w-full" alt="BELABARMI CSS" class="">
+                        <a href="./dist/img/portofolio/6.png" class="popup-link">
+                            <img src="./dist/img/portofolio/6.png" width="w-full" alt="">
+                        </a>
                     </div>
-                    <h3 class="text-xl text-dark font-semibold">Belajar bareng HIMAMI membahas CSS</h3>
+                    <h3 class="text-xl text-dark font-semibold">Pemateri Belajar membahas CSS HIMAMI</h3>
                     <p class="font-medium text-base text-darkngora">Menjadi pemateri tentang pembelajaran CSS yang
                         ditujukan untuk angkatan 2022</p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/sertif_jquery.png" width="w-full" alt="" class="">
-                    </div>
-                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan J-Query</h3>
-                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
-                        pelajaran J-Query 2023</p>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/6.png" alt="" class="popup-image">
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/sertif_laravel.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/7.jpg" class="popup-link">
+                            <img src="./dist/img/portofolio/7.jpg" width="w-full" alt="">
+                        </a>
                     </div>
-                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan Laravel</h3>
-                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
-                        pelajaran Laravel 2023</p>
+                    <h3 class="text-xl text-dark font-semibold">Ketua Pelaksana BUBARAMI (HIMAMI)</h3>
+                    <p class="font-medium text-base text-darkngora">Menjadi ketua pelaksana Buka Bersama Anak Manajemen
+                        Informatia pada <i>annual</i> program kerja HIMAMI 2023</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/7.jpg" alt="" class="popup-image">
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/sertif_RestfulAPI.png" width="w-full" alt="" class="">
-                    </div>
-                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan RESTful API</h3>
-                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
-                        pelajaran RESTful API 2023</p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/sertif_VSGA.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/sertif_VSGA.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_VSGA.png" width="w-full" alt="">
+                        </a>
                     </div>
                     <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan KOMINFO Digitalent
                         (Junior Web Programming)</h3>
                     <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan KOMINFO Digitalent dengan
                         mengambil pelajaran Junior Web Programming 2023</p>
                 </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_VSGA.png" alt="" class="popup-image">
+                </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/sertif_vuejs.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/sertif_literasi.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_literasi.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan KOMINFO Digitalent
+                        (Junior Web Programming)</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan KOMINFO Digitalent dengan
+                        mengambil pelajaran Junior Web Programming 2023</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_literasi.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3 relative">
+                        <img src="./dist/img/portofolio/sk_telkom.png" width="100%" height="auto" alt=""
+                            class="half-image">
+                        <span class="tooltip">Click to view full image</span>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Surat Keterangan Magang PT.Telekomunikasi Indonesia Tbk.
+                    </h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan magang di Telkom Indonesia
+                        pada unit (Planning, Engineering & Deployment).</p>
+                </div>
+
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/sertif_react.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_react.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan React Js</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
+                        pelajaran React js 2023
+                    </p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_react.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/sertif_jquery.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_jquery.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan J-Query</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
+                        pelajaran J-Query 2023</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_jquery.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/sertif_laravel.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_laravel.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan Laravel</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
+                        pelajaran Laravel 2023</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_laravel.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/sertif_RestfulAPI.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_RestfulAPI.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan RESTful API</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
+                        pelajaran RESTful API 2023</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_RestfulAPI.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/sertif_vuejs.png" class="popup-link">
+                            <img src="./dist/img/portofolio/sertif_vuejs.png" width="w-full" alt="">
+                        </a>
                     </div>
                     <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Pelatihan Vue.Js</h3>
                     <p class="font-medium text-base text-darkngora">Saya mengikuti pelatihan Codepolitan dengan
                         pelajaran Vue.js 2023</p>
                 </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/sertif_vuejs.png" alt="" class="popup-image">
+                </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/TSS4.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/TSS4.png" class="popup-link">
+                            <img src="./dist/img/portofolio/TSS4.png" width="w-full" alt="">
+                        </a>
                     </div>
                     <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Training Soft Skill 4</h3>
                     <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan Training Soft Skill 4 (TSS
                         4) 2023</p>
                 </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/TSS4.png" alt="" class="popup-image">
+                </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/TSS5.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/TSS5.png" class="popup-link">
+                            <img src="./dist/img/portofolio/TSS5.png" width="w-full" alt="">
+                        </a>
                     </div>
                     <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Training Soft Skill 5</h3>
                     <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan Training Soft Skill 5 (TSS
                         5) 2023</p>
                 </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/TSS5.png" alt="" class="popup-image">
+                </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden mb-3">
-                        <img src="./dist/img/portofolio/TSS6.png" width="w-full" alt="" class="">
+                        <a href="./dist/img/portofolio/TSS6.png" class="popup-link">
+                            <img src="./dist/img/portofolio/TSS6.png" width="w-full" alt="">
+                        </a>
                     </div>
                     <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Training Soft Skill 6</h3>
                     <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan Training Soft Skill 6 (TSS
                         6) 2023</p>
                 </div>
-
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/TSS6.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/seminar1.png" class="popup-link">
+                            <img src="./dist/img/portofolio/seminar1.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Seminar I <i>Quarter Life
+                            Crisis</i></h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan seminar I pada The Poster
+                        Hotel MICE Bandung</p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/seminar1.png" alt="" class="popup-image">
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden mb-3">
+                        <a href="./dist/img/portofolio/seminar2.png" class="popup-link">
+                            <img src="./dist/img/portofolio/seminar2.png" width="w-full" alt="">
+                        </a>
+                    </div>
+                    <h3 class="text-xl text-dark font-semibold">Sertifikat Mengikuti Seminar II</h3>
+                    <p class="font-medium text-base text-darkngora">Saya mengikuti kegiatan seminar II pada Hotel Harris
+                    </p>
+                </div>
+                <div id="popup-modal" class="white-popup mfp-hide z-20">
+                    <img src="./dist/img/portofolio/seminar2.png" alt="" class="popup-image">
+                </div>
             </div>
         </div>
 
@@ -363,7 +514,7 @@
                     <p class="font-medium text-md text-darkngora ">🙏</p>
                 </div>
             </div>
-            <form action="pesan.php" method="post">
+            <form id="myForm">
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                     <div class="w-full px-4 mb-8">
 
@@ -382,11 +533,19 @@
                             class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
                     </div>
                     <div class="w-full px-4">
-                        <button
+                        <button type="submit"
                             class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim</button>
                     </div>
                 </div>
             </form>
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function (event) {
+                    // Mencegah formulir mengirimkan permintaan ke server
+                    event.preventDefault();
+
+                    // Lakukan tindakan lain yang diinginkan di sini (misalnya, validasi atau pengiriman data dengan AJAX)
+                });
+            </script>
         </div>
 
     </section>
@@ -398,7 +557,7 @@
         <div class="container">
             <div class="flex flex-warp">
                 <div class="w-full px-4 mb-12 text-slate-200 font-medium md:w-1/3 sm:w-1">
-                    <h2 class="font-bold text-4xl text-white mb-5">SAN</h2>
+                    <!-- <h2 class="font-bold text-4xl text-white mb-5">SAN</h2> -->
                     <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
                     <p>ihsanzaky155@gmail.com</p>
                     <p>0882-2062-5662</p>
@@ -486,33 +645,12 @@
         </div>
 
     </footer>
-    <!-- Footer Akhir -->
+    <!-- Footer Akhir-- > -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="dist/js/script.js">
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="dist/js/script.js"></script>
 </body>
 </head>
 
